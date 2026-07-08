@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GETT Tools — Engineered for the Job Site</title>
+<meta name="description" content="GETT Tools designs and hand-assembles premium PACKOUT™ mobility systems and tool organization solutions in North Vancouver, Canada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="pl-mark">GETT</div>
+  <div class="pl-bar"><span id="plFill"></span></div>
+  <div class="pl-pct" id="plPct">CALIBRATING — 0%</div>
+</div>
+
+<!-- NOISE OVERLAY -->
+<svg class="noise" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cDot"></div>
+<div class="cursor-ring" id="cRing"></div>
+
+<!-- HEADER -->
+<header id="siteHeader">
+  <div class="nav-wrap">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18.5" stroke="#e4002b" stroke-width="2"/><path d="M20 8v6M20 26v6M8 20h6M26 20h6" stroke="#e4002b" stroke-width="2" stroke-linecap="square"/><circle cx="20" cy="20" r="6" fill="#e4002b"/></svg>
+      </span>
+      <span>GETT<small>PROFESSIONAL TOOLS</small></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <div class="nav-item">
+        <div class="nav-link">Shop <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <div class="mega">
+          <div class="mega-grid">
+            <div class="mega-col">
+              <div class="mega-title">Packout Mobility</div>
+              <div class="mega-list">
+                <a href="shop.html">PAC-EEzE Dolly Kit <span class="tag">Bestseller</span></a>
+                <a href="shop.html">4-Wheel Conversion Kits</a>
+                <a href="shop.html">Retractable Handle Systems</a>
+                <a href="shop.html">Stacking Adaptors</a>
+              </div>
+            </div>
+            <div class="mega-col">
+              <div class="mega-title">Wheels &amp; Casters</div>
+              <div class="mega-list">
+                <a href="shop.html">Pneumatic Replacement Wheels</a>
+                <a href="shop.html">Front Caster Wheels</a>
+                <a href="shop.html">All-Terrain Wheel Sets</a>
+                <a href="shop.html">Precision Bearings</a>
+              </div>
+            </div>
+            <div class="mega-col">
+              <div class="mega-title">Tool Organization</div>
+              <div class="mega-list">
+                <a href="shop.html">Modular Insert Trays</a>
+                <a href="shop.html">Foam Cutout Systems</a>
+                <a href="shop.html">Dividers &amp; Mounts</a>
+                <a href="shop.html">Label &amp; ID Kits</a>
+              </div>
+            </div>
+            <div class="mega-col">
+              <div class="mega-title">Custom &amp; Hardware</div>
+              <div class="mega-list">
+                <a href="shop.html">Custom Modifications <span class="tag">New</span></a>
+                <a href="shop.html">Stainless Hardware Kits</a>
+                <a href="shop.html">Replacement Parts</a>
+                <a href="shop.html">Shop All Products</a>
+              </div>
+            </div>
+            <div class="mega-feat">
+              <svg class="mf-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="#e4002b" stroke-width="1.5"/><circle cx="20" cy="20" r="5" fill="#e4002b"/></svg>
+              <h4>Built for PACKOUT™</h4>
+              <p>Every GETT system is engineered and hand-fit to the Milwaukee PACKOUT platform.</p>
+              <a class="btn btn-primary btn-sm" href="shop.html">Explore Products
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+        <div class="mega-simple">
+          <a href="about.html">Our Story <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a href="about.html#process">Manufacturing Process <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a href="about.html#quality">Quality &amp; Certifications <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a href="about.html#careers">Careers <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link" href="dealers.html">Dealers</a>
+        <div class="mega-simple">
+          <a href="dealers.html#apply">Become a Dealer <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a href="dealers.html#map">Find a Retailer <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a href="dealers.html#benefits">Dealer Benefits <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link" href="support.html">Support</a>
+        <div class="mega-simple">
+          <a href="support.html#faq">FAQs <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a href="support.html#warranty">Warranty &amp; Returns <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a href="downloads.html">Download Center <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a href="contact.html">Contact Support <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+        </div>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link" href="index.html#news">News</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <div class="head-actions">
+      <div class="lang-toggle"><span class="active">EN</span>/<span>FR</span></div>
+      <div class="divider-v"></div>
+      <button class="icon-btn" id="openSearch" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 20c1.8-4 5-6 8-6s6.2 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <a class="btn btn-primary btn-sm" href="#quote-modal" id="openQuote" style="margin-left:6px;">Get a Quote</a>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a class="m-link" data-sub="shop-sub">Shop <span>+</span></a>
+  <div class="m-sub" id="shop-sub">
+    <a href="shop.html">PAC-EEzE Dolly Kit</a><a href="shop.html">Wheels &amp; Casters</a>
+    <a href="shop.html">Tool Organization</a><a href="shop.html">Custom Modifications</a>
+  </div>
+  <a class="m-link" href="about.html">About</a>
+  <a class="m-link" href="dealers.html">Dealers</a>
+  <a class="m-link" href="support.html">Support</a>
+  <a class="m-link" href="downloads.html">Downloads</a>
+  <a class="m-link" href="index.html#news">News</a>
+  <a class="m-link" href="contact.html">Contact</a>
+  <div class="m-cta">
+    <a class="btn btn-primary" href="#quote-modal">Get a Quote</a>
+    <a class="btn btn-ghost" href="dealers.html">Become a Dealer</a>
+  </div>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-close" id="closeSearch"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2"/></svg></button>
+  <div class="search-box">
+    <div class="eyebrow">Search GETT Tools</div>
+    <input type="text" id="searchInput" placeholder="Search products, guides, dealers…" autocomplete="off">
+    <div class="search-hint"><span>Try "PAC-EEzE" or "warranty"</span><span id="searchCount">7 results</span></div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="particleCanvas"></canvas>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><b>NEW</b> PAC-EEzE V2 now shipping</div>
+      <h1>
+        <span class="line"><span class="word">Engineered</span></span>
+        <span class="line"><span class="word">to&nbsp;move.</span></span>
+        <span class="line"><span class="word accent">Built&nbsp;to&nbsp;last.</span></span>
+      </h1>
+      <p class="lead">GETT Tools designs and hand-assembles premium mobility and organization systems for the Milwaukee PACKOUT™ platform — engineered in North Vancouver, trusted by tradespeople across North America.</p>
+      <div class="hero-cta-row">
+        <a href="shop.html" class="btn btn-primary magnetic">Explore Products
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg>
+        </a>
+        <a href="dealers.html" class="btn btn-dark magnetic">Become a Dealer</a>
+        <a href="downloads.html" class="btn btn-ghost magnetic">Download Catalogue
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b class="counter" data-target="1400" data-suffix="+">0</b><span>Satisfied Customers</span></div>
+        <div class="hstat"><b class="counter" data-target="4.6" data-decimal="1" data-suffix="/5">0</b><span>Average Rating</span></div>
+        <div class="hstat"><b>100%</b><span>Canadian Made</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" id="heroVisual">
+      <div class="hv-ring r1"></div>
+      <div class="hv-ring r2"></div>
+      <div class="hv-core">
+        <svg viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="34" stroke="#e4002b" stroke-width="2"/>
+          <circle cx="50" cy="50" r="34" stroke="#8f8f92" stroke-width="1" stroke-dasharray="2 6"/>
+          <circle cx="50" cy="50" r="10" fill="#e4002b"/>
+          <path d="M50 16v10M50 74v10M16 50h10M74 50h10M27 27l7 7M66 66l7 7M73 27l-7 7M34 66l-7 7" stroke="#c9c9c7" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="hv-node" style="top:6%;left:48%;"></div>
+      <div class="hv-node" style="top:48%;left:4%;"></div>
+      <div class="hv-node" style="top:48%;right:4%;"></div>
+      <div class="hv-node" style="bottom:6%;left:48%;"></div>
+    </div>
+  </div>
+  <div class="scroll-ind"><div class="line"><span></span></div>SCROLL</div>
+</section>
+
+<!-- TRUSTED / MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span><b>1,400+</b> Customers Served<i class="dot"></i>Featured on <b>Etsy</b><i class="dot"></i>As seen with <b>JakeOfALL</b><i class="dot"></i><b>4.6 / 5</b> Average Rating<i class="dot"></i>100% <b>Canadian-Made</b><i class="dot"></i>Hand-Assembled in <b>North Vancouver</b><i class="dot"></i></span>
+    <span aria-hidden="true"><b>1,400+</b> Customers Served<i class="dot"></i>Featured on <b>Etsy</b><i class="dot"></i>As seen with <b>JakeOfALL</b><i class="dot"></i><b>4.6 / 5</b> Average Rating<i class="dot"></i>100% <b>Canadian-Made</b><i class="dot"></i>Hand-Assembled in <b>North Vancouver</b><i class="dot"></i></span>
+  </div>
+</div>
+
+<!-- FEATURED CATEGORIES -->
+<section class="sec sec-dark" id="categories">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">Shop by Category</div>
+        <h2>Four systems. One platform.</h2>
+      </div>
+      <p>Every GETT category is engineered around a single job: making your PACKOUT™ system faster to move, easier to organize, and built to survive the job site.</p>
+    </div>
+  </div>
+  <div class="cat-grid reveal">
+    <div class="cat-card">
+      <div class="cat-num">01 / MOBILITY</div>
+      <svg class="cat-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="14" stroke="#e4002b" stroke-width="2"/><circle cx="24" cy="24" r="4" fill="#e4002b"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6" stroke="#fff" stroke-width="2"/></svg>
+      <h3>Packout Mobility</h3>
+      <p>PAC-EEzE dolly conversion kits that turn any stacked PACKOUT into a smooth 4-wheel system.</p>
+      <a class="cat-link" href="shop.html#mobility">Shop Mobility <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">02 / WHEELS</div>
+      <svg class="cat-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="#e4002b" stroke-width="2"/><circle cx="24" cy="24" r="16" stroke="#fff" stroke-width="1" stroke-dasharray="3 5"/><circle cx="24" cy="24" r="5" fill="#e4002b"/></svg>
+      <h3>Wheels &amp; Casters</h3>
+      <p>Pneumatic and front caster replacement wheels engineered for rough terrain and job-site abuse.</p>
+      <a class="cat-link" href="shop.html#wheels">Shop Wheels <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">03 / ORGANIZATION</div>
+      <svg class="cat-icon" viewBox="0 0 48 48" fill="none"><rect x="6" y="8" width="36" height="32" rx="1" stroke="#e4002b" stroke-width="2"/><path d="M6 20h36M18 8v32M30 8v32" stroke="#fff" stroke-width="1.4"/></svg>
+      <h3>Tool Organization</h3>
+      <p>Modular insert trays, foam cutouts, and dividers that keep every tool in its place.</p>
+      <a class="cat-link" href="shop.html#organization">Shop Organization <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+    </div>
+    <div class="cat-card">
+      <div class="cat-num">04 / CUSTOM</div>
+      <svg class="cat-icon" viewBox="0 0 48 48" fill="none"><path d="M24 6l4.5 9.2 10.1 1.5-7.3 7.1 1.7 10-9-4.8-9 4.8 1.7-10-7.3-7.1 10.1-1.5z" stroke="#e4002b" stroke-width="2" stroke-linejoin="round"/></svg>
+      <h3>Custom Modifications</h3>
+      <p>Bespoke engineering for fleets and dealers who need a solution off our standard lineup.</p>
+      <a class="cat-link" href="dealers.html">Talk to Engineering <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="sec sec-charcoal" id="products">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">Featured Products</div>
+        <h2>Our best-selling systems</h2>
+      </div>
+      <p>Hand-assembled, quality-checked, and shipped from our North Vancouver warehouse.</p>
+    </div>
+
+    <div class="prod-grid reveal">
+      <div class="prod-card" data-qv="peeze">
+        <div class="prod-media">
+          <span class="prod-badge">Bestseller</span>
+          <div class="prod-actions">
+            <button class="pa-btn qv-trigger" data-qv="peeze" aria-label="Quick view"><svg viewBox="0 0 24 24" fill="none"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg></button>
+            <button class="pa-btn wish-btn" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 4 7 4c2 0 4 1 5 3 1-2 3-3 5-3 4 0 6.5 4.5 4.5 8.5C19 16.65 12 21 12 21z" stroke="currentColor" stroke-width="2"/></svg></button>
+            <button class="pa-btn compare-btn" aria-label="Compare"><svg viewBox="0 0 24 24" fill="none"><path d="M8 3v18M16 3v18M4 8h4M16 8h4M4 16h4M16 16h4" stroke="currentColor" stroke-width="2"/></svg></button>
+          </div>
+          <svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="65" r="16" stroke="#e4002b" stroke-width="3"/><circle cx="50" cy="65" r="4" fill="#e4002b"/><rect x="30" y="20" width="40" height="26" rx="2" stroke="#c9c9c7" stroke-width="2.5"/><path d="M50 46v3" stroke="#c9c9c7" stroke-width="2.5"/></svg>
+        </div>
+        <div class="prod-body">
+          <div class="prod-cat">Packout Mobility</div>
+          <h3>PAC-EEzE Dolly Conversion Kit</h3>
+          <div class="prod-specs">
+            <span><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z" fill="currentColor"/></svg>4.7 (312)</span>
+            <span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>Steel + PU</span>
+          </div>
+          <div class="prod-foot">
+            <a class="btn btn-primary" href="#quote-modal" data-qv="peeze">Request Quote</a>
+            <a class="btn btn-dark" href="product.html" data-qv="peeze">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-qv="pneumatic">
+        <div class="prod-media">
+          <div class="prod-actions">
+            <button class="pa-btn qv-trigger" data-qv="pneumatic" aria-label="Quick view"><svg viewBox="0 0 24 24" fill="none"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg></button>
+            <button class="pa-btn wish-btn" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 4 7 4c2 0 4 1 5 3 1-2 3-3 5-3 4 0 6.5 4.5 4.5 8.5C19 16.65 12 21 12 21z" stroke="currentColor" stroke-width="2"/></svg></button>
+            <button class="pa-btn compare-btn" aria-label="Compare"><svg viewBox="0 0 24 24" fill="none"><path d="M8 3v18M16 3v18M4 8h4M16 8h4M4 16h4M16 16h4" stroke="currentColor" stroke-width="2"/></svg></button>
+          </div>
+          <svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="30" stroke="#e4002b" stroke-width="4"/><circle cx="50" cy="50" r="30" stroke="#c9c9c7" stroke-width="1" stroke-dasharray="2 6"/><circle cx="50" cy="50" r="9" fill="#e4002b"/></svg>
+        </div>
+        <div class="prod-body">
+          <div class="prod-cat">Wheels &amp; Casters</div>
+          <h3>Pneumatic Replacement Wheels</h3>
+          <div class="prod-specs">
+            <span><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z" fill="currentColor"/></svg>4.8 (204)</span>
+            <span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>Set of 2</span>
+          </div>
+          <div class="prod-foot">
+            <a class="btn btn-primary" href="#quote-modal" data-qv="pneumatic">Request Quote</a>
+            <a class="btn btn-dark" href="product.html" data-qv="pneumatic">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-qv="caster">
+        <div class="prod-media">
+          <span class="prod-badge alt">New</span>
+          <div class="prod-actions">
+            <button class="pa-btn qv-trigger" data-qv="caster" aria-label="Quick view"><svg viewBox="0 0 24 24" fill="none"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg></button>
+            <button class="pa-btn wish-btn" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 4 7 4c2 0 4 1 5 3 1-2 3-3 5-3 4 0 6.5 4.5 4.5 8.5C19 16.65 12 21 12 21z" stroke="currentColor" stroke-width="2"/></svg></button>
+            <button class="pa-btn compare-btn" aria-label="Compare"><svg viewBox="0 0 24 24" fill="none"><path d="M8 3v18M16 3v18M4 8h4M16 8h4M4 16h4M16 16h4" stroke="currentColor" stroke-width="2"/></svg></button>
+          </div>
+          <svg viewBox="0 0 100 100" fill="none"><path d="M50 20v18M30 62l17-9M70 62l-17-9" stroke="#c9c9c7" stroke-width="3" stroke-linecap="round"/><circle cx="50" cy="70" r="12" stroke="#e4002b" stroke-width="3"/></svg>
+        </div>
+        <div class="prod-body">
+          <div class="prod-cat">Wheels &amp; Casters</div>
+          <h3>Front Caster Wheel Kit</h3>
+          <div class="prod-specs">
+            <span><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z" fill="currentColor"/></svg>4.6 (98)</span>
+            <span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>Bolt-on</span>
+          </div>
+          <div class="prod-foot">
+            <a class="btn btn-primary" href="#quote-modal" data-qv="caster">Request Quote</a>
+            <a class="btn btn-dark" href="product.html" data-qv="caster">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-qv="organizer">
+        <div class="prod-media">
+          <div class="prod-actions">
+            <button class="pa-btn qv-trigger" data-qv="organizer" aria-label="Quick view"><svg viewBox="0 0 24 24" fill="none"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg></button>
+            <button class="pa-btn wish-btn" aria-label="Wishlist"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 4 7 4c2 0 4 1 5 3 1-2 3-3 5-3 4 0 6.5 4.5 4.5 8.5C19 16.65 12 21 12 21z" stroke="currentColor" stroke-width="2"/></svg></button>
+            <button class="pa-btn compare-btn" aria-label="Compare"><svg viewBox="0 0 24 24" fill="none"><path d="M8 3v18M16 3v18M4 8h4M16 8h4M4 16h4M16 16h4" stroke="currentColor" stroke-width="2"/></svg></button>
+          </div>
+          <svg viewBox="0 0 100 100" fill="none"><rect x="22" y="26" width="56" height="42" rx="2" stroke="#e4002b" stroke-width="3"/><path d="M22 47h56M43 26v42M64 26v42" stroke="#c9c9c7" stroke-width="2"/></svg>
+        </div>
+        <div class="prod-body">
+          <div class="prod-cat">Tool Organization</div>
+          <h3>Modular Insert Tray System</h3>
+          <div class="prod-specs">
+            <span><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 16l-6.5 4.5 2-7L2 9h7z" fill="currentColor"/></svg>4.9 (156)</span>
+            <span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>Stackable</span>
+          </div>
+          <div class="prod-foot">
+            <a class="btn btn-primary" href="#quote-modal" data-qv="organizer">Request Quote</a>
+            <a class="btn btn-dark" href="product.html" data-qv="organizer">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY GETT + STATS -->
+<section class="sec sec-dark" id="stats">
+  <div class="container">
+    <div class="why-grid">
+      <div class="reveal">
+        <div class="eyebrow">Why GETT</div>
+        <h2 style="font-size:clamp(30px,3.6vw,44px);margin:16px 0 30px;color:#fff;">Small shop.<br>Zero compromises.</h2>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12l4-8h10l4 8-9 9-9-9z" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div><h4>Local &amp; Independent</h4><p>Designed and run out of a single warehouse in North Vancouver, British Columbia — not a reseller, not a drop-shipper.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M7 12l3 3 7-7" stroke="currentColor" stroke-width="2.5"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg></div>
+            <div><h4>Hand-Assembled &amp; Inspected</h4><p>Every kit is packed and quality-checked by the same small team that designs it — that's us in the warehouse.</p></div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+            <div><h4>Made to Outwork the Job</h4><p>Steel construction and precision tolerances built for daily abuse on real job sites, not showroom shelves.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat-panel cut-border reveal">
+        <div class="stat-grid">
+          <div class="stat"><b class="counter" data-target="1400" data-suffix="+">0</b><span>Satisfied Customers</span></div>
+          <div class="stat"><b class="counter" data-target="4.6" data-decimal="1" data-suffix="/5">0</b><span>Average Star Rating</span></div>
+          <div class="stat"><b class="counter" data-target="100" data-suffix="%">0</b><span>Canadian-Made</span></div>
+          <div class="stat"><b class="counter" data-target="24" data-suffix="/7">0</b><span>Emergency Support</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANUFACTURING PROCESS -->
+<section class="sec sec-charcoal" id="process">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">Our Process</div>
+        <h2>From design to your door</h2>
+      </div>
+      <p>A transparent, five-step process — the same one our small team runs on every single order.</p>
+    </div>
+    <div class="process-row reveal">
+      <div class="proc-step"><div class="proc-num">01</div><h4>Design</h4><p>Every part is modeled and toleranced to fit the PACKOUT™ platform exactly.</p></div>
+      <div class="proc-step"><div class="proc-num">02</div><h4>Machine</h4><p>Steel components are precision cut and formed to spec.</p></div>
+      <div class="proc-step"><div class="proc-num">03</div><h4>Assemble</h4><p>Hand-assembled and torque-checked by our warehouse team.</p></div>
+      <div class="proc-step"><div class="proc-num">04</div><h4>Inspect</h4><p>Every kit is test-fit before it's boxed for shipping.</p></div>
+      <div class="proc-step"><div class="proc-num">05</div><h4>Ship</h4><p>Packed and shipped from North Vancouver, typically within 48 hours.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES SERVED -->
+<section class="sec sec-dark" id="industries">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">Built For</div>
+        <h2>Trusted across the trades</h2>
+      </div>
+      <p>Wherever a PACKOUT system rides in a truck bed, GETT is engineered to go with it.</p>
+    </div>
+  </div>
+  <div class="ind-grid reveal">
+    <div class="ind-card"><svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6" stroke="currentColor" stroke-width="2"/></svg><span>Construction</span></div>
+    <div class="ind-card"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Electrical</span></div>
+    <div class="ind-card"><svg viewBox="0 0 24 24" fill="none"><path d="M14 2v6l6 6-4 4-6-6H4l6-6V2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>HVAC</span></div>
+    <div class="ind-card"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="1" stroke="currentColor" stroke-width="2"/><path d="M8 6V4h8v2" stroke="currentColor" stroke-width="2"/></svg><span>Fleet Service</span></div>
+    <div class="ind-card"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l9 5v10l-9 5-9-5V7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>DIY &amp; Home</span></div>
+  </div>
+</section>
+
+<!-- DEALER CTA -->
+<section class="dealer-banner" id="dealers">
+  <div class="container dealer-inner">
+    <div>
+      <div class="eyebrow">Become a Dealer</div>
+      <h2>Bring GETT Tools to your shop floor.</h2>
+      <p>Join our growing network of independent retailers and specialty tool shops carrying GETT PACKOUT™ accessories.</p>
+      <div class="hero-cta-row">
+        <a class="btn btn-primary" href="#dealer-modal" id="openDealer">Apply to Become a Dealer</a>
+        <a class="btn btn-ghost" href="dealers.html#map">Find a Retailer Near You</a>
+      </div>
+    </div>
+    <div class="dealer-benefits">
+      <div class="db-item"><svg viewBox="0 0 24 24" fill="none"><path d="M7 12l3 3 7-7" stroke="currentColor" stroke-width="2.5"/></svg>Preferred wholesale pricing tiers</div>
+      <div class="db-item"><svg viewBox="0 0 24 24" fill="none"><path d="M7 12l3 3 7-7" stroke="currentColor" stroke-width="2.5"/></svg>Marketing &amp; display assets included</div>
+      <div class="db-item"><svg viewBox="0 0 24 24" fill="none"><path d="M7 12l3 3 7-7" stroke="currentColor" stroke-width="2.5"/></svg>Dedicated dealer support line</div>
+      <div class="db-item"><svg viewBox="0 0 24 24" fill="none"><path d="M7 12l3 3 7-7" stroke="currentColor" stroke-width="2.5"/></svg>Fast Canada-wide fulfillment</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec sec-dark">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">Customer Reviews</div>
+        <h2>What tradespeople are saying</h2>
+      </div>
+      <p>Real, verified reviews from customers who bought and installed GETT systems.</p>
+    </div>
+    <div class="test-wrap reveal">
+      <div class="test-track" id="testTrack">
+        <div class="test-slide">
+          <div class="test-card">
+            <div class="stars">★★★★★</div>
+            <p>"Great manufacturer. Great quality. Video instructions were spot on. Worth it!"</p>
+            <div class="test-who"><div class="test-avatar">SC</div><div><b>Steve Collins</b><span>Verified Buyer</span></div></div>
+          </div>
+          <div class="test-card">
+            <div class="stars">★★★★★</div>
+            <p>"Very good and honest seller. These wheels are a great addition to the rolling toolbox — very high quality with no concerns about long-term durability."</p>
+            <div class="test-who"><div class="test-avatar">MS</div><div><b>Matt Santiamagro</b><span>Verified Buyer</span></div></div>
+          </div>
+          <div class="test-card">
+            <div class="stars">★★★★★</div>
+            <p>"Nice improvement to the rolling tool box. Easy install and it feels rock solid on site."</p>
+            <div class="test-who"><div class="test-avatar">RB</div><div><b>REBorn04</b><span>Verified Buyer</span></div></div>
+          </div>
+        </div>
+        <div class="test-slide">
+          <div class="test-card">
+            <div class="stars">★★★★★</div>
+            <p>"Good stuff, quality built, fun to use. Exactly what I needed for my mobile setup."</p>
+            <div class="test-who"><div class="test-avatar">E</div><div><b>Eric</b><span>Verified Buyer</span></div></div>
+          </div>
+          <div class="test-card">
+            <div class="stars">★★★★★</div>
+            <p>"These replacement wheels were a perfect fit and very high quality — a real upgrade if you take your toolbox outdoors."</p>
+            <div class="test-who"><div class="test-avatar">JD</div><div><b>J. Delgado</b><span>Verified Buyer</span></div></div>
+          </div>
+          <div class="test-card">
+            <div class="stars">★★★★★</div>
+            <p>"I love this set of wheels — this is the second time I've bought them. Highly recommend to anyone on a job site."</p>
+            <div class="test-who"><div class="test-avatar">TM</div><div><b>T. Marsh</b><span>Verified Buyer</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="test-nav">
+        <div class="test-dot active" data-i="0"></div>
+        <div class="test-dot" data-i="1"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="sec sec-charcoal" id="news">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">Latest News</div>
+        <h2>From the workshop</h2>
+      </div>
+      <a class="btn btn-ghost" href="index.html#news">View All News</a>
+    </div>
+    <div class="news-grid reveal">
+      <div class="news-card">
+        <div class="news-media"><span class="news-tag">Video</span><svg viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></div>
+        <div class="news-body">
+          <span class="news-date">JUNE 2026</span>
+          <h3>JakeOfALL puts the PAC-EEzE through a full job-site test</h3>
+          <a class="news-read" href="index.html#news">Watch the review <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-media"><span class="news-tag">Product</span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg></div>
+        <div class="news-body">
+          <span class="news-date">MAY 2026</span>
+          <h3>Pneumatic Replacement Wheels V2 now shipping Canada-wide</h3>
+          <a class="news-read" href="shop.html">Shop now <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+        </div>
+      </div>
+      <div class="news-card">
+        <div class="news-media"><span class="news-tag">Company</span><svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V9l7-5 7 5v12" stroke="currentColor" stroke-width="2"/></svg></div>
+        <div class="news-body">
+          <span class="news-date">APRIL 2026</span>
+          <h3>GETT Tools crosses 1,400 satisfied customers milestone</h3>
+          <a class="news-read" href="about.html">Read our story <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT (condensed) -->
+<section class="sec sec-dark" id="about">
+  <div class="container">
+    <div class="why-grid">
+      <div class="reveal">
+        <div class="eyebrow">Our Story</div>
+        <h2 style="font-size:clamp(30px,3.6vw,44px);margin:16px 0 22px;color:#fff;">Started in a garage. Built for the trades.</h2>
+        <p style="color:var(--c-steel-light);font-size:15.5px;line-height:1.8;max-width:520px;margin-bottom:20px;">GETT Tools is an independent, small business based in North Vancouver, British Columbia. We saw tradespeople dragging heavy PACKOUT stacks across job sites and built a better way to move them. Today, every kit that ships still passes through the hands of the same small team that designed it.</p>
+        <div class="hero-cta-row">
+          <a class="btn btn-dark" href="about.html#careers">See Careers</a>
+          <a class="btn btn-ghost" href="downloads.html">Download Company Profile</a>
+        </div>
+      </div>
+      <div class="stat-panel cut-border reveal" id="downloads">
+        <div class="mega-title" style="margin-bottom:20px;">Download Center</div>
+        <div class="qv-list">
+          <li><span>Product Catalogue 2026</span><span><a class="news-read" href="#" style="color:var(--c-red);">PDF ↓</a></span></li>
+          <li><span>PAC-EEzE Install Guide</span><span><a class="news-read" href="#" style="color:var(--c-red);">PDF ↓</a></span></li>
+          <li><span>Warranty Registration Form</span><span><a class="news-read" href="#" style="color:var(--c-red);">PDF ↓</a></span></li>
+          <li><span>Wheel Kit Spec Sheet</span><span><a class="news-read" href="#" style="color:var(--c-red);">PDF ↓</a></span></li>
+        </div>
+        <a class="btn btn-primary btn-sm" href="downloads.html" style="margin-top:6px;">Browse Full Download Center</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-charcoal" id="faq" style="padding-bottom:110px;">
+  <div class="container">
+    <div class="sec-head reveal" style="justify-content:center;text-align:center;">
+      <div style="width:100%;">
+        <div class="eyebrow" style="justify-content:center;">Support</div>
+        <h2 style="margin:16px auto 0;">Frequently asked questions</h2>
+      </div>
+    </div>
+    <div class="faq-wrap reveal">
+      <div class="faq-item open">
+        <div class="faq-q"><h4>Will GETT products fit my Milwaukee PACKOUT?</h4><div class="plus"></div></div>
+        <div class="faq-a"><p>Yes. Every GETT mobility and organization system is designed and test-fit specifically to the Milwaukee PACKOUT™ modular platform.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>What's your warranty policy?</h4><div class="plus"></div></div>
+        <div class="faq-a"><p>All GETT hardware is covered by our standard workmanship warranty. Register your product in the Download Center to activate coverage.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Do you ship outside of Canada?</h4><div class="plus"></div></div>
+        <div class="faq-a"><p>We ship across Canada and the United States. Emergency and expedited shipping options are available at checkout.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>How do I become a GETT dealer?</h4><div class="plus"></div></div>
+        <div class="faq-a"><p>Submit an application through our Become a Dealer form. Our team reviews every application within 3–5 business days.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="news-cta" id="contact">
+  <div class="container nc-inner">
+    <div>
+      <h2>Get smarter job-site tips.</h2>
+      <p>Product drops, install tips, and dealer news — straight from the warehouse. No spam.</p>
+    </div>
+    <form class="nc-form" onsubmit="return false;">
+      <input type="email" placeholder="you@company.com" required>
+      <button class="btn btn-primary" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="index.html" class="logo"><span class="logo-mark"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18.5" stroke="#e4002b" stroke-width="2"/><circle cx="20" cy="20" r="6" fill="#e4002b"/></svg></span><span>GETT</span></a>
+        <p>Independent, Canadian-made mobility and organization systems for the modern trades. Hand-assembled in North Vancouver, BC.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="4" stroke="currentColor" stroke-width="2"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h3V5h-3a4 4 0 00-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9z" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <a href="#" aria-label="Etsy"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h11l1 5h-3l-.5-3H9v5h5v3H9v6h6l.5-3h3l-1 5H6z" stroke="currentColor" stroke-width="1.3"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Products</h5>
+        <a href="shop.html#mobility">Packout Mobility</a>
+        <a href="shop.html#wheels">Wheels &amp; Casters</a>
+        <a href="shop.html#organization">Tool Organization</a>
+        <a href="shop.html">Custom Modifications</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="about.html">Our Story</a>
+        <a href="about.html#process">Manufacturing</a>
+        <a href="dealers.html#apply">Become a Dealer</a>
+        <a href="about.html#careers">Careers</a>
+        <a href="index.html#news">News</a>
+      </div>
+      <div class="foot-col">
+        <h5>Support</h5>
+        <a href="support.html#faq">FAQs</a>
+        <a href="support.html#warranty">Warranty &amp; Returns</a>
+        <a href="downloads.html">Download Center</a>
+        <a href="contact.html">Contact Support</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <span class="fc-text">1-84-GETT-MORE</span>
+        <span class="fc-text">support@getttools.com</span>
+        <span class="fc-text">Mon–Fri 8am–6pm PST<br>Sat 9am–4pm · 24/7 Emergency</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 GETT Tools. All rights reserved. PACKOUT™ is a trademark of Milwaukee Tool; GETT Tools is an independent manufacturer, not affiliated with Milwaukee Tool.</p>
+      <div class="foot-legal"><a href="#">Privacy</a><a href="#">Shipping Policy</a><a href="#">Return Policy</a></div>
+    </div>
+  </div>
+  <div class="foot-ghost">GETT</div>
+</footer>
+
+<!-- QUICK VIEW MODAL -->
+<div class="overlay-bg" id="overlayBg"></div>
+<div class="modal" id="qvModal">
+  <button class="modal-close" data-close><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2"/></svg></button>
+  <div class="qv-grid">
+    <div class="qv-media" id="qvMedia"></div>
+    <div class="qv-body">
+      <div class="prod-cat" id="qvCat">Packout Mobility</div>
+      <h3 id="qvTitle">PAC-EEzE Dolly Conversion Kit</h3>
+      <p class="desc" id="qvDesc">Converts your stacked PACKOUT system into a smooth-rolling 4-wheel dolly. Precision steel frame with polyurethane wheels rated for job-site terrain.</p>
+      <ul class="qv-list" id="qvSpecs">
+        <li><span>Material</span><span>Steel + Polyurethane</span></li>
+        <li><span>Compatibility</span><span>Milwaukee PACKOUT™</span></li>
+        <li><span>Weight Capacity</span><span>250 lb</span></li>
+        <li><span>Warranty</span><span>2-Year Limited</span></li>
+      </ul>
+      <div class="qv-actions">
+        <a class="btn btn-primary" href="#quote-modal" id="qvQuoteBtn">Request Quote</a>
+        <button class="btn btn-dark" data-close>Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUOTE REQUEST MODAL -->
+<div class="modal form-modal" id="quoteModal">
+  <button class="modal-close" data-close><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2"/></svg></button>
+  <div id="quoteFormWrap">
+    <h3>Request a Quote</h3>
+    <p>Tell us what you need — a real person from our small team will follow up within 1 business day.</p>
+    <form id="quoteForm" onsubmit="return false;">
+      <div class="f-row">
+        <div class="f-group"><label>Full Name</label><input type="text" required></div>
+        <div class="f-group"><label>Email</label><input type="email" required></div>
+      </div>
+      <div class="f-group"><label>Product Interested In</label>
+        <select><option>PAC-EEzE Dolly Conversion Kit</option><option>Pneumatic Replacement Wheels</option><option>Front Caster Wheel Kit</option><option>Modular Insert Tray System</option><option>Custom Modification</option></select>
+      </div>
+      <div class="f-group"><label>Message</label><textarea rows="3" placeholder="Quantity, timeline, or any custom requirements…"></textarea></div>
+      <button class="btn btn-primary" type="submit" style="width:100%;">Submit Request</button>
+    </form>
+  </div>
+  <div class="form-success" id="quoteSuccess">
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke="currentColor" stroke-width="2"/></svg>
+    <h4>Quote request received</h4>
+    <p>Thanks — our team will reach out shortly. In the meantime, feel free to keep browsing.</p>
+    <button class="btn btn-dark" data-close style="margin-top:20px;">Close</button>
+  </div>
+</div>
+
+<!-- DEALER MODAL -->
+<div class="modal form-modal" id="dealerModal">
+  <button class="modal-close" data-close><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2"/></svg></button>
+  <div id="dealerFormWrap">
+    <h3>Become a GETT Dealer</h3>
+    <p>Tell us about your shop and we'll send over wholesale pricing and onboarding details.</p>
+    <form id="dealerForm" onsubmit="return false;">
+      <div class="f-row">
+        <div class="f-group"><label>Business Name</label><input type="text" required></div>
+        <div class="f-group"><label>Contact Email</label><input type="email" required></div>
+      </div>
+      <div class="f-group"><label>Store Location (City, Province/State)</label><input type="text" required></div>
+      <div class="f-group"><label>Tell us about your shop</label><textarea rows="3" placeholder="Store type, current brands carried, estimated monthly volume…"></textarea></div>
+      <button class="btn btn-primary" type="submit" style="width:100%;">Submit Application</button>
+    </form>
+  </div>
+  <div class="form-success" id="dealerSuccess">
+    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l3 3 5-6" stroke="currentColor" stroke-width="2"/></svg>
+    <h4>Application received</h4>
+    <p>Our team reviews new dealer applications within 3–5 business days. We'll be in touch soon.</p>
+    <button class="btn btn-dark" data-close style="margin-top:20px;">Close</button>
+  </div>
+</div>
+
+<!-- COMPARE BAR -->
+<div class="compare-bar" id="compareBar">
+  <span><b id="compareCount">0</b> products selected to compare</span>
+  <div style="display:flex;gap:10px;">
+    <button class="btn btn-ghost btn-sm" id="clearCompare">Clear</button>
+    <button class="btn btn-primary btn-sm">Compare Now</button>
+  </div>
+</div>
+
+<!-- BACK TO TOP -->
+<a href="#" class="back-top" id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2"/></svg></a>
+
+<!-- CHAT FAB -->
+<div class="chat-fab" id="chatFab"><div class="pulse"></div><svg viewBox="0 0 24 24" fill="none"><path d="M21 12c0 4-4 7-9 7-1.1 0-2.1-.14-3-.4L3 20l1.6-4.3C3.6 14.5 3 13.3 3 12c0-4 4-7 9-7s9 3 9 7z" stroke="currentColor" stroke-width="2"/></svg></div>
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head"><div><b>GettY AI</b><span>Usually replies instantly</span></div><button id="closeChat" style="width:26px;height:26px;">✕</button></div>
+  <div class="chat-body">
+    <div class="msg">Hi! I'm GettY, GETT Tools' assistant. Ask me about compatibility, warranty, or order status.</div>
+  </div>
+  <div class="chat-input"><input type="text" placeholder="Type a message…"><button class="btn btn-primary btn-sm">Send</button></div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
